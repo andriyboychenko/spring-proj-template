@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+	<!-- Spring MVC controller -->
+    <bean name="/index.htm" class="org.andriy.spring.controller.MyController" />
+ 
+    <bean id="viewResolver"
+    	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+        <property name="prefix">
+            <value>/WEB-INF/jsp/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+ 
+	<!-- Defining custom message source for internationalization -->
+ 	<bean id="messageSource" class="org.andriy.spring.db.DatabaseMessageSourceBase">
+ 		<constructor-arg type="java.lang.String" value="Test DI"/> <!-- Constructor-based DI -->
+ 		<property name="testValue" value="Test DI 2"/> <!-- Setter-based DI -->
+ 	</bean>
+ 
+</beans>
