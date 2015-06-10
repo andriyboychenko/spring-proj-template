@@ -11,7 +11,7 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<spring.version>4.1.6.RELEASE</spring.version>
 	<srvlet.api.version>3.1.0</srvlet.api.version>
 	<hibernate.version>4.0.1.Final</hibernate.version>
@@ -19,28 +19,28 @@
   
   <dependencies>
   
-    <dependency>
-      	<groupId>junit</groupId>
-      	<artifactId>junit</artifactId>
-      	<version>3.8.1</version>
-      	<scope>test</scope><!-- goes in manifest classpath, AND excluded from WEB-INF/lib -->
-    </dependency>
+    	<dependency>
+      		<groupId>junit</groupId>
+      		<artifactId>junit</artifactId>
+      		<version>3.8.1</version>
+      		<scope>test</scope><!-- goes in manifest classpath, AND excluded from WEB-INF/lib -->
+    	</dependency>
     
-    <!-- Spring framework -->
-    <dependency>
-      	<groupId>org.springframework</groupId>
-      	<artifactId>spring-context</artifactId>
-      	<version>${spring.version}</version>
-      	<scope>compile</scope><!-- goes in manifest classpath, AND included in WEB-INF/lib. it is default scope, so it is not necessary to put it-->
-    </dependency>
+	 <!-- Spring framework -->
+    	<dependency>
+      		<groupId>org.springframework</groupId>
+      		<artifactId>spring-context</artifactId>
+      		<version>${spring.version}</version>
+      		<scope>compile</scope><!-- goes in manifest classpath, AND included in WEB-INF/lib. it is default scope, so it is not necessary to put it-->
+    	</dependency>
     
-    <dependency>
-	  	<groupId>org.springframework</groupId>
-	  	<artifactId>spring-web</artifactId>
-	  	<version>${spring.version}</version>
-	</dependency>
- 
 	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${spring.version}</version>
+    	</dependency>
+ 
+    	<dependency>
 	  	<groupId>org.springframework</groupId>
 	  	<artifactId>spring-webmvc</artifactId>
 	  	<version>${spring.version}</version>
@@ -58,24 +58,24 @@
 	<!-- Actually hibernate is included in Jboss AS 7.1.1, but it is impossible to set this dependency
 	     with provided scope due to this bug https://developer.jboss.org/thread/195925 -->
 	<dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-core</artifactId>
-        <version>${hibernate.version}</version>
-    </dependency>
+        	<groupId>org.hibernate</groupId>
+        	<artifactId>hibernate-core</artifactId>
+        	<version>${hibernate.version}</version>
+    	</dependency>
 
-    <!-- HSQL Hyper SQL -->
-    <dependency>
+    	<!-- HSQL Hyper SQL -->
+    	<dependency>
 		<groupId>org.hsqldb</groupId>
-        <artifactId>hsqldb</artifactId>
+        	<artifactId>hsqldb</artifactId>
 		<version>2.2.8</version>
 	</dependency>
 	    
-    <!-- EJB -->
+    	<!-- EJB -->
 	<dependency>
-    	<groupId>javax</groupId>
-    	<artifactId>javaee-api</artifactId>
-    	<version>6.0</version>
-    	<scope>provided</scope>
+    		<groupId>javax</groupId>
+    		<artifactId>javaee-api</artifactId>
+    		<version>6.0</version>
+    		<scope>provided</scope>
 	</dependency>
 		    
 	    
