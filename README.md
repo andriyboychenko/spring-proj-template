@@ -7,6 +7,7 @@ I've created this repository just to serve me as a simple reference of how to co
 * Internationalization based on the database MessageSource
 * Dependency Injection
 * EJB Startup Bean
+* No tests, shame on me :)
 
 Note: this example contains only xml-based configurations. In future I'll create a branch with annotation based configs
 
