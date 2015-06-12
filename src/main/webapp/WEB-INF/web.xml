@@ -8,13 +8,13 @@
  
   	<servlet>
   		<servlet-name>application</servlet-name> <!-- indicates application-servlet.xml with MVC configurations -->
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        	<load-on-startup>1</load-on-startup>
   	</servlet>
  
-  	<servlet-mapping>
+  	<servlet-mapping> <!-- url mapping. it means that DispatcherServlet will map urls like http://localhost:8080/myapp/index.htm, where myapp is defined in jboss-web.xml  -->
  		<servlet-name>application</servlet-name>
-        <url-pattern>*.htm</url-pattern>
+        	<url-pattern>*.htm</url-pattern>
   	</servlet-mapping>
  
 </web-app>
